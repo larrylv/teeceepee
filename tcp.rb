@@ -14,7 +14,6 @@ class Teeceepee
     synpkt               = PacketFu::TCPPacket.new(config: @config, flavor: "Linux")
     synpkt.ip_daddr      = @ip.to_s
     synpkt.tcp_dst       = @port.to_i
-    synpkt.tcp_src       = 41700 # hard coded for debugging w/ Wireshark
     synpkt.tcp_flags.syn = 1
     synpkt.recalc
 
