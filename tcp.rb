@@ -42,6 +42,7 @@ class Teeceepee
   def connect
     send_syn
     @state = SYN_SENT_STATE
+    sleep 10
   end
 
   def handle(pkt)
