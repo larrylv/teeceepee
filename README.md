@@ -13,6 +13,8 @@ bundle install
 sudo ruby examples/get_page.rb
 ```
 
+![Example](https://raw.githubusercontent.com/larrylv/teeceepee/master/assets/get_groupon_com.png)
+
 I run it with Ruby 2.2.2 on Linux. There is an issue of `PacketFu` gem to get it working on Mac OS X.
 
 Will blog about some implementation details soon.
