@@ -26,16 +26,16 @@ class Teeceepee
   CLOSED_STATE = "CLOSED".freeze
   SYN_SENT_STATE = "SYN-SENT".freeze
 
-  def initialize(dst_ip, dst_port, fake_ip_address = nil)
-    @dst_ip          = dst_ip
-    @dst_port        = dst_port
+  def initialize(hostname, fake_ip_address = nil)
+    @dst_ip          = Resolv.getaddress(hostname)
+    @dst_port        = 80
     @config          = PacketFu::Utils.whoami?
     @state           = CLOSED_STATE
     @fake_ip_address = fake_ip_address
 
     @config = @config.merge(ip_saddr: fake_ip_address) if fake_ip_address
 
-    @listener = Listener.new(self, @config, dst_ip)
+    @listener = Listener.new(self, @config, @dst_ip)
     @listener_thread = Thread.new { @listener.listen }
   end
 
