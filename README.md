@@ -17,8 +17,9 @@ sudo ruby examples/get_page.rb
 
 I run it with Ruby 2.2.2 on Linux. There is an issue of `PacketFu` gem to get it working on Mac OS X.
 
-Will blog about some implementation details soon.
+I wrote a blog about some details of this fun project, go check it out [Write a TCP Stack in Ruby][larry-article].
 
 [jvns-github]: https://github.com/jvns
 [jvns-article]: http://jvns.ca/blog/2014/08/12/what-happens-if-you-write-a-tcp-stack-in-python/
+[larry-article]: http://blog.larrylv.com/write-a-tcp-stack-in-ruby/
 
